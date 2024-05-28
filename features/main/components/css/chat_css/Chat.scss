@@ -1,0 +1,94 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #33363d;
+
+  .chatContent {
+    display: flex;
+    height: 80vh;
+
+    .maxChatMessage {
+      overflow-y: scroll;
+      width: 100%;
+    }
+    .chatMessage {
+      overflow-y: scroll;
+      width: 75%;
+
+      ::-webkit-scrollbar-track {
+        background-color: #2b2d33;
+        width: 15px;
+        border-radius: 20px;
+      }
+    }
+    .chatSerchList {
+      overflow-y: scroll;
+      background-color: #2b2d33;
+      width: 25%;
+
+      h3 {
+        color: white;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-left: 5px;
+      }
+      .chatSerchListHeader {
+        color: white;
+        display: flex;
+        align-items: center;
+        height: 6vh;
+        justify-content: space-between;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        background-color: #1a1c20;
+      }
+      .pagiNationContents {
+        text-align: center;
+
+        .pagiNation {
+          display: inline-block;
+          height: 6vh;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  .chatInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #40444b;
+    border-radius: 5px;
+    margin: 20px;
+    color: lightgray;
+
+    form {
+      flex-grow: 1;
+      input {
+        padding: 15px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: large;
+        width: 100%;
+      }
+      .chatInputButton {
+        display: none;
+      }
+    }
+
+    .chatInputIcon {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #b9bbbe;
+      .MuiSvgIcon-root {
+        cursor: pointer;
+      }
+    }
+  }
+}

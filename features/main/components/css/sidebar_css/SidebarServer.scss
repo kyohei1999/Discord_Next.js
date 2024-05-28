@@ -1,0 +1,27 @@
+.sidebarServer {
+  width: 60px;
+  height: 60px;
+  background-color: #33363d;
+  border-radius: 9999px;
+  margin-bottom: 5px;
+  position: relative;
+  margin-top: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+
+  p {
+    color: #7b7c85;
+    display: flex;
+    font-size: 0.8rem;
+    padding-top: 20px;
+  }
+
+  &:hover {
+    border-radius: 10px;
+    background-color: #5b6aef;
+    p {
+      color: white;
+    }
+  }
+}

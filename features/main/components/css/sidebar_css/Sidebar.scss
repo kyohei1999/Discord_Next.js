@@ -1,0 +1,147 @@
+.sidebar {
+  display: flex;
+  flex: 0.3;
+  height: 100vh;
+  // background-color: #33363d;
+
+  .sidebarLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1c20;
+    padding: 7px 15px;
+
+    .serverIconMain,
+    .serverIcon {
+      width: 60px;
+      height: 60px;
+      background-color: #33363d;
+      border-radius: 9999px;
+      margin-bottom: 10px;
+      position: relative;
+      margin-top: 7px;
+
+      img {
+        position: absolute;
+        width: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .serverAddIcon {
+      width: 60px;
+      height: 60px;
+      background-color: #33363d;
+      border-radius: 9999px;
+      margin-bottom: 10px;
+      position: relative;
+      margin-top: 7px;
+      cursor: pointer;
+
+      .AddIcon {
+        color: green;
+        position: absolute;
+        width: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:hover {
+        background-color: green;
+        border-radius: 10px;
+        .AddIcon {
+          color: white;
+        }
+      }
+    }
+
+    .serverIconMain {
+      background-color: transparent;
+    }
+  }
+  .sidebarRight {
+    background-color: #2b2d33;
+    width: 300px;
+    position: relative;
+    flex-grow: 1;
+
+    .sidebarTop {
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .sidebarChannels {
+      padding: 13px;
+
+      .sidebarChannelsHeader {
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+
+        .sidebarHeader {
+          display: flex;
+          .text {
+            position: absolute;
+            margin-left: 30px;
+            margin-top: 0px;
+          }
+        }
+
+        .sidebarAddIcon {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .sidebarFooter {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-bottom: 5px;
+      padding-top: 10px;
+      left: 0px;
+      background-color: #292b2f;
+
+      .sidebarAccount {
+        display: flex;
+
+        img {
+          width: 50px;
+          height: 50px;
+          padding-left: 5px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .accounName {
+          margin-left: 5px;
+
+          h4 {
+            color: white;
+            font-weight: 500px;
+          }
+
+          span {
+            color: #686a6e;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .sidebarVoice {
+        display: flex;
+        align-items: center;
+        color: #686a6e;
+      }
+    }
+  }
+}

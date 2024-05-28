@@ -1,0 +1,17 @@
+.ChatSerchList {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: white;
+  margin-bottom: 5px;
+
+  .serchMessageInfo {
+    padding: 20px 20px 20px 10px;
+
+    .serchMessageTimeStamp {
+      color: #50545b;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+  }
+}

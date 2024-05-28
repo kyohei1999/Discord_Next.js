@@ -1,0 +1,36 @@
+.message {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: white;
+  margin-bottom: 5px;
+
+  .messageInfo {
+    padding: 10px;
+
+    .messageTimeStamp {
+      color: #50545b;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+  }
+  .deleteButton {
+    margin-left: auto;
+    background-color: #50545b;
+    top: 80%;
+    transform: translateY(-80%);
+    visibility: hidden;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: #2d2e34;
+    .deleteButton {
+      visibility: visible;
+    }
+  }
+}
