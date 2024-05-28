@@ -1,5 +1,5 @@
 'use client';
-import LoginPage from './LoginPage/page';
+import LoginPage from './LoginPage/index';
 // import './page.scss';
 import { store } from '../features/main/store';
 import { Provider } from 'react-redux';

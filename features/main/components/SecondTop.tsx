@@ -12,6 +12,7 @@ import useServerCollection from '../hooks/useServerCollection';
 import { initializeServerInfo } from '../slice/serverSlice';
 import { setChannelInfo } from '../slice/channelSlice';
 import useCollection from '../hooks/useCollection';
+import { useRouter } from 'next/navigation';
 
 const SecondTop = () => {
   const user = useAppSelector((state) => state.user.user);
@@ -20,6 +21,7 @@ const SecondTop = () => {
   const { doucuments: channels } = useCollection('servers', 'channels');
   const serverId = useAppSelector((state) => state.server.serverId);
   const channelId = useAppSelector((state) => state.channel.channelId);
+  const router = useRouter();
 
   useEffect(() => {
     // 再読み込み時のみ実行される処理
@@ -58,6 +60,12 @@ const SecondTop = () => {
       }
     });
   }, [dispatch]);
+
+  useEffect(() => {
+    if (!user) {
+      router.push('/'); // userがnullだったらapp直下のpage.tsxに遷移させる
+    }
+  }, [user, router]);
 
   return (
     <div className="SecondeTop">
